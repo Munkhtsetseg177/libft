@@ -1,2 +1,2 @@
 # libft
-first project libft
+This project is my library
