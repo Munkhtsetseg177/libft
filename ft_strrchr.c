@@ -6,7 +6,7 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 10:49:28 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/06/05 22:33:52 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/09 15:03:54 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i--;
 	}
 	return (NULL);

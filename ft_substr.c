@@ -6,52 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 09:54:00 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/05 20:37:05 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/09 15:11:07 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-    size_t count;
-
-    count = 0;
-    while(s[count] !='\0')
-        count ++;
-    return(count);
-}
-
-
-void *ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t i;
-	
-	if(dst == NULL && src == NULL)
-		return (0);
-	i = 0;
-	while(i < n)
-	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i ++;
-	}
-	return (dst);
-}
-
-char *ft_strdup(const char *src)
-{
-	char *new;
-	int i;
-
-	i = 0;
-	if(!(new = (char *) malloc(sizeof(char) * ft_strlen(src) + 1)))
-		return NULL;
-	while( *src)
-		new[i ++] =*src ++;
-	new[i] = '\0';
-	return (new);
-}
+/*
+	/26 Checks if its trying to create a substring bigger than `s`
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -64,7 +26,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start > s_len)
 		return (ft_strdup(""));
-	// Checks if its trying to create a substring bigger than `s`
 	if (start + len > s_len)
 		len = s_len - start;
 	size = len + 1;

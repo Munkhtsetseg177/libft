@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 00:23:45 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/09 12:45:46 by munkhtsetse      ###   ########.fr       */
+/*   Created: 2022/08/11 21:22:38 by munkhtsetse       #+#    #+#             */
+/*   Updated: 2022/08/11 21:22:52 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** While lst is not null, apply function
+** to element. Then set the current element
+** to the next one in the chain. Meaning,
+** lst = lst->next
+*/
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
+	t_list	*next;
 
-	i = 0;
-	if (dstsize > 0)
+	if (lst != NULL)
 	{
-		while (src[i] && i < dstsize -1)
+		next = lst;
+		while (1)
 		{
-			dst[i] = src [i];
-			i ++;
+			(*f)(next->content);
+			next = next->next;
+			if (next == NULL)
+				return ;
 		}
-		dst[i] = 0;
 	}
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
 }

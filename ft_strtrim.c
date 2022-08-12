@@ -6,64 +6,47 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 22:06:46 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/06 09:54:34 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/10 17:01:35 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int
-	char_in_set(char c, char const *set)
-	{
-		int i;
-
-		i = 0;
-		while(set [i])
-		{
-			if(set[i] == c)
-				return (1); 
-			i ++;
-		}
-		return (0);
-	}
-
-static	int get_str_len(const char *str, const char *set)
+	ft_char_in_set(char c, char const *set)
 {
-	int start;
-	int char_count;
-	
+	size_t	i;
 
-	start = 0;
-	char_count = 0;
-	while(str[start])
+	i = 0;
+	while (set[i])
 	{
-		if(char_in_set(str[start], set))
-			char_count ++;
-		start ++;
+		if (set[i] == c)
+			return (1);
+		i++;
 	}
-	return (start - char_count);
+	return (0);
 }
 
-char	*ft_strtrim(char const *s, char const *set)
+char
+	*ft_strtrim(char const *s1, char const *set)
 {
-	char *trim;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
 
-	trim = malloc(sizeof(trim) * get_str_len(s, set) + 1);
-	if(!(trim))
+	start = 0;
+	while (s1[start] && ft_char_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_char_in_set(s1[end - 1], set))
+		end--;
+	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	if (!str)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while(s[i])
-	{
-		if(char_in_set(s[i], set))
-		{
-			trim[j] = s[i];
-			j ++;
-		}
-		i ++;
-	}
-	return (trim);
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
+	return (str);
 }

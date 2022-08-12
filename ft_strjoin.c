@@ -6,22 +6,11 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 20:50:37 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/05 21:40:34 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/09 22:11:04 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t res;
-
-	res = 0;
-	while (str[res] != '\0')
-		++res;
-	return (res);
-}
 
 char	*ft_strcpy(char *dst, const char *src)
 {
@@ -36,6 +25,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	dst[i] = '\0';
 	return (dst);
 }
+
 char	*ft_strcat(char *s1, const char *s2)
 {
 	unsigned int	i;
