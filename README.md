@@ -1,2 +1,2 @@
 # libft
-This project is my library
+remote from 2
