@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+         #
+#    By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 22:02:00 by mbaatar           #+#    #+#              #
-#    Updated: 2022/08/12 14:28:22 by munkhtsetse      ###   ########.fr        #
+#    Updated: 2022/08/13 15:16:19 by mbaatar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,29 +44,33 @@ SRCS = ft_memset.c		\
 		ft_putchar_fd.c	\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
-		ft_putnbr_fd.c	\
-		ft_lstadd_front.c	\
-		ft_lstadd_back.c \
-		ft_lstclear.c	\
-		ft_lstdelone.c	\
-		ft_lstiter.c	\
-		ft_lstlast.c	\
-		ft_lstmap.c \
-		ft_lstnew.c	\
- 		ft_lstsize.c
+		ft_putnbr_fd.c
+		
+SRCS_B =	ft_lstadd_front.c	\
+			ft_lstadd_back.c \
+			ft_lstdelone.c	\
+			ft_lstclear.c	\
+			ft_lstiter.c	\
+			ft_lstlast.c	\
+			ft_lstmap.c \
+			ft_lstnew.c	\
+ 			ft_lstsize.c
 		
 includes = *.h
 OBJS = ${SRCS:.c=.o}
+OBJS_B = ${SRCS_B:.c=.o}
 CC		= gcc
 RM		= rm -f
 CFLAGS = -Wall -Wextra -Werror
+all:	${NAME}
 .c.o:
 		${CC} ${CFLAGS} -I includes -c $< -o ${<:.c=.o}
 $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
-all:	${NAME}
+bonus:  ${OBJS_B} ${OBJS}
+		ar rcs ${NAME} ${OBJS} ${OBJS_B}
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJS_B}
 fclean:	clean
 		${RM} ${NAME}
 re:		fclean all
