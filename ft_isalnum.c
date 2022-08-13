@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbaatar <mbaatar@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:02:27 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/04/22 14:22:00 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/13 10:23:38 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Checks if the character is alphanumeric.
+*/
 
 int	ft_isalnum(int c)
 {

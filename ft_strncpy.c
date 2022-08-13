@@ -6,11 +6,10 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:14:54 by paulohl           #+#    #+#             */
-/*   Updated: 2022/08/05 20:04:33 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/13 09:59:07 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, int len)

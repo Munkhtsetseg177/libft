@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:31:25 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/06 12:04:54 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/13 10:21:21 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Converts the initial portion of a string pointed to the variable string, to
+** an int representarion (type).
+*/
 
 int	ft_atoi(const char *str)
 {
