@@ -6,7 +6,7 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:22:38 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/11 21:22:52 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:58:23 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

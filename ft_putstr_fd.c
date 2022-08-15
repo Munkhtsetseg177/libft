@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:09:03 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/08/09 00:23:00 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:50:01 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Outputs the string s to the file descriptor fd.
+*/
 
 void	ft_putstr_fd(char *s, int fd)
 {

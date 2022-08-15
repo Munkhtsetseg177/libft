@@ -6,12 +6,13 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:31:25 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/13 10:21:21 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:26:05 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
+** atoi("123") => 123 //
 ** Converts the initial portion of a string pointed to the variable string, to
 ** an int representarion (type).
 */

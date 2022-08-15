@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:21:12 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/11 22:00:02 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:38:09 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** adds the elemment 'new' at the end of the list
+*/
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

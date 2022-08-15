@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbaatar <mbaatar@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:02:45 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/04/22 14:03:04 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/15 09:27:38 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Checks if the character is from the ASCII table.
+*/
 
 int	ft_isascii(int c)
 {

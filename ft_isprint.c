@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:03:01 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/06/12 21:25:39 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:28:33 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Checks if the character can be printed (including space).
+*/
 
 int	ft_isprint(int c)
 {

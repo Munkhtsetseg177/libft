@@ -6,11 +6,17 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:03:59 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/08/13 09:59:48 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:51:50 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+Allocates (with malloc(3)) and returns an array
+of strings obtained by splitting ’s’ using the
+character ’c’ as a delimiter.  The array must end
+with a NULL pointer.
+*/
 
 static int	ft_count_word(char const *s, char c)
 {

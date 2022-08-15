@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:23:40 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/11 21:28:09 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:37:04 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Counts the number of nodes in a list.
+*/
 
 int	ft_lstsize(t_list *lst)
 {

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:54:27 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/06 12:48:17 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/15 10:37:59 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Locates the first occurrence of c (converted to an unsigned char)
+** in string s.
+*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

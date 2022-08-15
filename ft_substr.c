@@ -6,13 +6,17 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 09:54:00 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/09 15:11:07 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 11:00:29 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
 	/26 Checks if its trying to create a substring bigger than `s`
+** extract substring from string
+** 		Allocates (with malloc(3)) and returns a substring from the string ’s’.
+**	The substring begins at index ’start’ and is of maximum size ’len’.
+*/
 */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

@@ -6,11 +6,16 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 20:50:37 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/09 22:11:04 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:54:16 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Allocates with malloc() and returns a “fresh” string ending with ’\0’,
+** result of the concatenation of s1 and s2. If the allocation fails the
+** function returns NULL.
+*/
 
 char	*ft_strcpy(char *dst, const char *src)
 {

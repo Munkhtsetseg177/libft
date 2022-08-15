@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:23:10 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/11 21:23:13 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:59:56 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Returns the last node of the list.
+*/
 
 t_list	*ft_lstlast(t_list *lst)
 {

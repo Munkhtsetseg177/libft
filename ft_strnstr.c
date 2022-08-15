@@ -6,11 +6,16 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 08:35:59 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/01 15:00:34 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:58:09 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Locates the first occurrence of the null-terminated string little in the
+** string big, where not more than len characters are searched.
+** Characters that appear after a `\0' character are not searched.
+*/
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

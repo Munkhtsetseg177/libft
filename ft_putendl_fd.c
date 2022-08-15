@@ -6,11 +6,15 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:07:17 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/08/09 11:47:59 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:48:58 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Outputs the string s to the file descriptor fd followed by a ’\n’.
+*/
+
 
 void	ft_putendl_fd(char *s, int fd)
 {

@@ -6,11 +6,14 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 11:41:37 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/09 15:51:04 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 09:29:39 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Takes an int, and converts it to a null-terminated string.
+*/
 
 static unsigned int	get_nb_digit(long n_l, int sign)
 {

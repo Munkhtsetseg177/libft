@@ -6,11 +6,16 @@
 /*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:15:18 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/10 16:55:55 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 10:57:22 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Lexicographically compares not more than n characters of the
+** null-terminated strings s1 and s2.  characters that appear after a `\0'
+** character are not compared.
+*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

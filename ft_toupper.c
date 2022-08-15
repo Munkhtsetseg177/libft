@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbaatar <mbaatar@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:21:59 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/04/26 13:52:43 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/15 11:00:58 by munkhtsetse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+** Converts a lower-case letter to the corresponding upper-case letter.
+*/
 
 int	ft_toupper(int c)
 {
