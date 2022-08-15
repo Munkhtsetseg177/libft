@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
+/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 09:54:00 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 11:00:29 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 11:21:58 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 ** extract substring from string
 ** 		Allocates (with malloc(3)) and returns a substring from the string ’s’.
 **	The substring begins at index ’start’ and is of maximum size ’len’.
-*/
 */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

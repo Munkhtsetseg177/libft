@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
+/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:03:59 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/08/15 10:51:50 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 15:41:36 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,72 +18,79 @@ character ’c’ as a delimiter.  The array must end
 with a NULL pointer.
 */
 
-static int	ft_count_word(char const *s, char c)
+static size_t	get_word_len(char const *s, char c)
 {
-	int	i;
-	int	word;
+	size_t	len;
 
-	i = 0;
-	word = 0;
-	while (s && s[i])
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
+}
+
+static void	go_to_next_word(char const **s, char c)
+{
+	while (**s && **s == c)
+		(*s)++;
+}
+
+static void	free_memory(char **split, size_t word_count)
+{
+	size_t	i;
+
+	i = -1;
+	while (++i <= word_count)
+		free(split[i]);
+	free(split);
+}
+
+static char	**split_s(char const *s, char c, size_t word_count)
+{
+	size_t	current_word;
+	size_t	word_len;
+	char	**split;
+
+	split = (char **) malloc((word_count + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	current_word = -1;
+	while (*s && ++current_word < word_count)
 	{
-		if (s[i] != c)
+		go_to_next_word(&s, c);
+		word_len = get_word_len(s, c);
+		split[current_word] = ft_substr(s, 0, word_len);
+		if (!split[current_word])
 		{
-			word++;
-			while (s[i] != c && s[i])
-				i++;
+			free_memory(split, word_count);
+			return (NULL);
 		}
-		else
-			i++;
+		s += word_len;
 	}
-	return (word);
-}
-
-static int	ft_size_word(char const *s, char c, int i)
-{
-	int	size;
-
-	size = 0;
-	while (s[i] != c && s[i])
-	{
-		size++;
-		i++;
-	}
-	return (size);
-}
-
-static void	ft_free(char **strs, int j)
-{
-	while (j-- > 0)
-		free(strs[j]);
-	free(strs);
+	split[word_count] = NULL;
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		word;
-	char	**strs;
-	int		size;
-	int		j;
+	char		*s_trimmed;
+	char const	*ptr;
+	size_t		word_count;
+	char		**split;
 
-	i = 0;
-	j = -1;
-	word = ft_count_word(s, c);
-	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
+	if (!s)
 		return (NULL);
-	while (++j < word)
+	s_trimmed = ft_strtrim(s, &c);
+	if (!s_trimmed)
+		return (NULL);
+	ptr = s_trimmed;
+	word_count = 0;
+	while (*ptr)
 	{
-		while (s[i] == c)
-			i++;
-		size = ft_size_word(s, c, i);
-		if (!(strs[j] = ft_substr(s, i, size)))
-		{
-			ft_free(strs, j);
-			return (NULL);
-		}
-		i += size;
+		go_to_next_word(&ptr, c);
+		ptr += get_word_len(ptr, c);
+		word_count++;
 	}
-	strs[j] = 0;
-	return (strs);
+	split = split_s(s_trimmed, c, word_count);
+	free(s_trimmed);
+	return (split);
 }

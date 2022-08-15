@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
+/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:23:31 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 10:36:04 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 15:02:56 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

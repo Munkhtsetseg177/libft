@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
+/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 11:41:37 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 09:29:39 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 15:04:15 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ char	*ft_itoa(int n)
 	else
 		n_l = n;
 	nb_digit = get_nb_digit(n_l, sign);
-	if (!(outstr = malloc(sizeof(char) * (nb_digit + 1))))
+	outstr = malloc(sizeof(char) * (nb_digit + 1));
+	if (!outstr)
 		return (NULL);
 	convert_nb(outstr, n_l, nb_digit, sign);
 	return (outstr);

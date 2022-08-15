@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munkhtsetsegbaatar <munkhtsetsegbaatar@    +#+  +:+       +#+        */
+/*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 22:06:46 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 10:58:43 by munkhtsetse      ###   ########.fr       */
+/*   Updated: 2022/08/15 13:03:47 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ char
 	size_t	end;
 
 	start = 0;
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (NULL);
 	while (s1[start] && ft_char_in_set(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
