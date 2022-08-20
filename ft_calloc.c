@@ -6,7 +6,7 @@
 /*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:42:33 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/20 14:05:50 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/20 14:47:32 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;
-	unsigned long long	amount;
-	unsigned long long	i;
+	long	amount;
+	size_t	i;
 
 	if (size && SIZE_MAX / size < count)
 		return (NULL);
