@@ -6,7 +6,7 @@
 /*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:23:31 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 15:02:56 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/20 11:23:39 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*elem;
 
-	if (!(elem = malloc(sizeof(t_list))))
+	elem = malloc(sizeof(t_list));
+	if (!elem)
 		return (NULL);
 	elem->content = content;
 	elem->next = NULL;
