@@ -6,7 +6,7 @@
 /*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:03:59 by mbaatar           #+#    #+#             */
-/*   Updated: 2022/08/20 14:21:50 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/20 14:29:14 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ with a NULL pointer.
 
 static int	ft_word_count(char const *s, char c)
 {
-	int	counter;
-	int	word;
+	size_t	counter;
+	size_t	word;
 	size_t	i;
 
 	i = 0;
