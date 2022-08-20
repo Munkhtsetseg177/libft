@@ -6,7 +6,7 @@
 /*   By: mbaatar <mbaatar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:42:33 by munkhtsetse       #+#    #+#             */
-/*   Updated: 2022/08/15 15:18:15 by mbaatar          ###   ########.fr       */
+/*   Updated: 2022/08/20 14:05:50 by mbaatar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,22 @@
 ** The allocated memory is filled with bytes of value zero.
 */
 
-void	*ft_calloc(size_t number, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	total;
-	void	*ptr;
+	char	*ptr;
+	unsigned long long	amount;
+	unsigned long long	i;
 
-	total = number * size;
-	ptr = malloc(total);
-	if (!ptr)
+	if (size && SIZE_MAX / size < count)
 		return (NULL);
-	ft_bzero(ptr, total);
-	return (ptr);
+	amount = count * size;
+	ptr = (char *)malloc(amount);
+	if (ptr == NULL)
+		return (NULL);
+	i = 0;
+	while (amount-- > 0)
+	{
+		ptr[i++] = 0;
+	}
+	return ((void *)ptr);
 }
